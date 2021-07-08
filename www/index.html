@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; connect-src *">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Mon jeu</title>
+</head>
+<body>
+<div id="blackScreen">
+    <div class="loaderScreen"></div>
+    <div class="logo"></div>
+    <div class="logo"></div>
+</div>
+<div class="c-card">
+    <div class="heroBody">
+        <div id="heroShadow"></div>
+        <div id="heroRightArmBlock">
+            <div id="heroRightArmBase" class="baseHeroPart"></div>
+            <div id="heroRightShoulderBase" class="baseHeroPart"></div>
+            <div id="heroRightHandBase" class="baseHeroPart"></div>
+            <div id="heroRightArm"></div>
+            <div id="heroRightShoulder"></div>
+            <div id="heroRightThumb"></div>
+            <div id="heroSupplies"></div>
+            <div id="heroRightHand"></div>
+        </div>
+        <div id="heroChest"></div>
+        <div id="heroHead"></div>
+        <div id="heroRightLeg"></div>
+        <div id="heroLeftLeg"></div>
+        <div id="heroBelt"></div>
+        <div id="heroEyebrows"></div>
+        <div id="heroMouth"></div>
+        <div id="heroEyes"></div>
+        <div id="heroBeard"></div>
+        <div id="heroHair"></div>
+        <div id="heroEars"></div>
+        <div id="heroHelmet"></div>
+        <div id="heroLeftArmBlock">
+            <div id="heroWeapon"></div>
+            <div id="heroLeftShoulderBase" class="baseHeroPart"></div>
+            <div id="heroLeftArmBase" class="baseHeroPart"></div>
+            <div id="heroLeftHandBase" class="baseHeroPart"></div>
+            <div id="heroLeftGauntletBase" class="baseHeroPart"></div>
+            <div id="heroLeftShoulder"></div>
+            <div id="heroLeftArm"></div>
+            <div id="heroLeftHand"></div>
+            <div id="heroLeftGauntlet"></div>
+        </div>
+    </div>
+    <div class="lifebar" id="lifebarHero"><div class="innerLife"></div><p>100</p></div>
+    <div class="lifebar" id="lifebarMonster"><div class="innerLife"></div><p>100</p></div>
+    <div class="fightDamagesText"></div>
+    <div class="fightHealText"></div>
+    <div id="c-step1">
+        <div class="c-switch">
+            <div id="raceHelpPopup">
+                Les Vikings ont une meilleure résistance aux dégats.
+            </div>
+            <span id="prevRace" class="c-switch-button left-button"></span>
+            <span class='c-switch-label' id="raceLabel"><span id="raceLabelText">VIKING</span><span id="raceHelp"></span></span>
+            <span id="nextRace" class="c-switch-button right-button"></span>
+        </div>
+        <div class="c-switch">
+            <span id="prevHair" class="c-switch-button left-button"></span>
+            <span class='c-switch-label' >CHEVEUX</span>
+            <span id="nextHair" class="c-switch-button right-button"></span>
+        </div>
+        <div class="c-switch">
+            <span id="prevBeard" class="c-switch-button left-button"></span>
+            <span class='c-switch-label' >BARBE</span>
+            <span id="nextBeard" class="c-switch-button right-button"></span>
+        </div>
+        <div class="color-picker-group">
+            <span class="color-picker-hair" style="background-color: #d3a147" datasrc="0"></span>
+            <span class="color-picker-hair" style="background-color: #655a46" datasrc="1"></span>
+            <span class="color-picker-hair" style="background-color: #3c3c3c" datasrc="2"></span>
+            <span class="color-picker-hair" style="background-color: #a7a7a7" datasrc="3"></span>
+            <span class="color-picker-hair" style="background-color: #d37634" datasrc="4"></span>
+        </div>
+        <div class="c-switch-button next-step-button"></div>
+    </div>
+    <div id="c-step2" style="display:none">
+        <div class="c-switch">
+            <span id="prevEyebrows" class="c-switch-button left-button"></span>
+            <span class='c-switch-label' >SOURCILS</span>
+            <span id="nextEyebrows" class="c-switch-button right-button"></span>
+        </div>
+        <div class="c-switch">
+            <span id="prevMouth" class="c-switch-button left-button"></span>
+            <span class='c-switch-label' >BOUCHE</span>
+            <span id="nextMouth" class="c-switch-button right-button"></span>
+        </div>
+        <div class="c-switch">
+            <span id="prevEyes" class="c-switch-button left-button"></span>
+            <span class='c-switch-label' >YEUX</span>
+            <span id="nextEyes" class="c-switch-button right-button"></span>
+        </div>
+        <div class="color-picker-group">
+            <span class="color-picker-eyes" style="background-color: #00C853" datasrc="0"></span>
+            <span class="color-picker-eyes" style="background-color: #2783ff" datasrc="1"></span>
+            <span class="color-picker-eyes" style="background-color: #e5c300" datasrc="2"></span>
+            <span class="color-picker-eyes" style="background-color: #ff3100" datasrc="3"></span>
+            <span class="color-picker-eyes" style="background-color: #6c6c6c" datasrc="4"></span>
+        </div>
+        <div class="c-switch-button prev-step-button"></div>
+        <div class="c-switch-button next-step-button"></div>
+    </div>
+    <div id="c-step3" style="display:none">
+        <div class="c-hero-name">
+            <input id="heroName" type="text" placeholder="NOM"/>
+            <div class="icon-container">
+                <i class="loader"></i>
+            </div>
+        </div>
+        <div class="c-switch-button prev-step-button"></div>
+        <div class="c-switch-button finish-button"></div>
+    </div>
+    <div id="game">
+        <div class="flashError"></div>
+        <div class="topBar">
+            <div class="xpBack"></div>
+            <div class="xpFront"></div>
+            <div id="xpLabel">1</div>
+            <div class="inTopbar">
+                <span class="resourceTopbar">
+                    <span class="resourceIcon goldIcon"></span>
+                    <span id="gold">0</span>
+                </span>
+                <span class="resourceTopbar">
+                    <span class="resourceIcon cristalIcon"></span>
+                    <span id="cristal">0</span>
+                    <span id="getCristalsButton" class="plusIcon"></span>
+                </span>
+            </div>
+        </div>
+        <div id="progressQuest">
+            <div id="progressQuestInner" style="width:1%"></div>
+            <p id="progressQuestLabel"></p>
+        </div>
+        <div id="questActive">
+            <div id="quest0" class="questItem"></div>
+            <div id="quest1" class="questItem"></div>
+            <div id="quest2" class="questItem"></div>
+            <table id="questTable">
+                <tr>
+                    <td>
+                        <div>
+                            <div class="questParam">
+                                <span class="iconQuest chrono"></span><span id="chronoQuest">1:00</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="questParam">
+                                <span class="iconQuest gold"></span><span id="goldQuest">0</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="questParam">
+                                <span class="iconQuest xp"></span><span id="xpQuest">0</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div id="questMonster">
+                            <div class="monsterBody">
+                                <div class="monsterShadow"></div>
+                                <div class="monsterBodyPart monsterRightShoulder"></div>
+                                <div class="monsterBodyPart monsterRightArm"></div>
+                                <div class="monsterBodyPart monsterRightHand"></div>
+                                <div class="monsterBodyPart monsterThumb"></div>
+                                <div class="monsterBodyPart monsterChest"></div>
+                                <div class="monsterHead"></div>
+                                <div class="monsterBodyPart monsterBelt"></div>
+                                <div class="monsterBodyPart monsterRightLeg"></div>
+                                <div class="monsterBodyPart monsterLeftLeg"></div>
+                                <div class="monsterMouth"></div>
+                                <div class="monsterEyes"></div>
+                                <div class="monsterEars"></div>
+                                <div class="furryEars"></div>
+                                <div class="monsterLeftArmBlock">
+                                    <div class="monsterBodyPart monsterLeftShoulder"></div>
+                                    <div class="monsterBodyPart monsterLeftArm"></div>
+                                    <div class="monsterBodyPart monsterLeftHand"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="questParam">
+                            <span class="iconQuest fire"></span><span id="elem0Quest">0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="questParam">
+                            <span class="iconQuest water"></span><span id="elem2Quest">0</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="questParam">
+                            <span class="iconQuest thunder"></span><span id="elem1Quest">0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="questParam">
+                            <span class="iconQuest earth"></span><span id="elem3Quest">0</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="questParam">
+                            <span class="iconQuest wind"></span><span id="elem4Quest">0</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="questParam">
+                            <span class="iconQuest sword"></span><span id="weaponQuest">1 - 1</span>(<span id="weaponElemQuest" class="iconQuest punchIcon"></span>)
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div id="validateQuest"></div>
+        </div>
+        <div id="stuffActive">
+            <div class="stuffPiece" id="helmetStuff"></div>
+            <div class="stuffPiece" id="shouldersStuff"></div>
+            <div class="stuffPiece" id="chestStuff"></div>
+            <div class="stuffPiece" id="beltStuff"></div>
+            <div class="stuffPiece" id="handsStuff">
+                <div class="hoverStuff"></div></div>
+            <div class="stuffPiece" id="weaponStuff"></div>
+            <div class="stuffPiece" id="legsStuff"></div>
+            <div class="stuffPiece" id="reserve0"></div>
+            <div class="stuffPiece" id="reserve1"></div>
+            <div class="stuffPiece" id="reserve2"></div>
+            <div class="stuffPiece" id="reserve3"></div>
+            <div class="stuffPiece" id="reserve4"></div>
+            <div id="stuffStats">
+                <table id="statsTable">
+                    <tr>
+                        <td>
+                            <div id="upgradePoints">0</div>
+                        </td>
+                        <td>
+                            <div id="switchStats" datasrc="1">
+                                <span class="leftSide"></span>
+                                <span class="middle"></span>
+                                <span class="icon"></span>
+                                <span class="middle"></span>
+                                <span class="rightSide"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="statsElement">
+                        <td>
+                            <div class="stuffStat">
+                                <span class="iconStats fire"></span><span id="statsHero1">0</span>
+                                <span id="upStats1" class="iconStats add"></span>
+                            </div>
+                            <div class="stuffStat">
+                                <span class="iconStats thunder"></span><span id="statsHero2">0</span>
+                                <span id="upStats2" class="iconStats add"></span>
+                            </div>
+                            <div class="stuffStat" id="weaponStats">
+                                <span class="iconStats sword"></span><span id="statsHeroWeapon">1 - 1</span> (<span class="iconQuest punchIcon"></span>)
+                            </div>
+                        </td>
+                        <td>
+                            <div class="stuffStat">
+                                <span class="iconStats water"></span><span id="statsHero3">0</span>
+                                <span id="upStats3" class="iconStats add"></span>
+                            </div>
+                            <div class="stuffStat">
+                                <span class="iconStats earth"></span><span id="statsHero4">0</span>
+                                <span id="upStats4" class="iconStats add"></span>
+                            </div>
+                            <div class="stuffStat">
+                                <span class="iconStats wind"></span><span id="statsHero5">0</span>
+                                <span id="upStats5" class="iconStats add"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr id="statsDetails" style="display: none">
+                        <td>
+                            <div class="stuffStat">
+                                <span class="iconStats damages"></span><span id="statsHeroDamages">0</span>
+                            </div>
+                            <div class="stuffStat">
+                                <span class="iconStats critic"></span><span id="statsHeroCC">0</span>
+                            </div>
+                            <div class="stuffStat">
+                                <span class="iconStats sword"></span><span id="statsHeroWeaponTrue">1 - 1</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="stuffStat">
+                                <span class="iconStats life"></span><span id="statsHeroLife">0</span>
+                            </div>
+                            <div class="stuffStat">
+                                <span class="iconStats shield"></span><span id="statsHeroResistence">0</span>
+                            </div>
+                            <div class="stuffStat">
+                                <span class="iconStats dodge"></span><span id="statsHeroDodge">0</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table id="stuffDetailsTable">
+                    <tr>
+                        <td>
+                            <div id="stuffImage"></div>
+                            <span id="backStatsButton" class="statsImageButtons"></span>
+                            <span id="panoInfoButton" class="statsImageButtons"></span>
+                            <span id="sellStuffButton" class="statsImageButtons"></span>
+                        </td>
+                        <td>
+                            <div id="stuffDesc">
+                                <div id="stuffName"></div>
+                                <div id="stuffStatsList"></div>
+                                <div id="equipButton">
+                                    <span class="leftSide"></span>
+                                    <span class="middle">EQUIPER</span>
+                                    <span class="rightSide"></span>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="socialActive">
+            <table id="ladder">
+                <tr>
+                    <th>#</th>
+                    <th>Pseudo</th>
+                    <th>Niveau</th>
+                </tr>
+            </table>
+        </div>
+        <div id="shopActive">
+            <div class="shop-container">
+                <div class="scroll-shop">
+                    <div class="shopItem">
+                        <div class="title">Coffre commun</div>
+                        <div class="shopChest item1"></div>
+                        <div class="price coin">100<span class="goldIcon"></span></div>
+                        <table class="progressRarity">
+                            <tr>
+                                <td class="common" style="width: 60%"></td>
+                                <td class="rare" style="width: 35%"></td>
+                                <td class="epic" style="width: 5%"></td>
+                            </tr>
+                        </table>
+                        <div class="buyChest" datasrc="0"></div>
+                    </div>
+                    <div class="shopItem">
+                        <div class="title">Coffre rare</div>
+                        <div class="shopChest item2"></div>
+                        <div class="price coin">500<span class="goldIcon"></span></div>
+                        <table class="progressRarity">
+                            <tr>
+                                <td class="common" style="width: 30%"></td>
+                                <td class="rare" style="width: 50%"></td>
+                                <td class="epic" style="width: 15%"></td>
+                                <td class="legendary" style="width: 5%"></td>
+                            </tr>
+                        </table>
+                        <div class="buyChest" datasrc="1"></div>
+                    </div>
+                    <div class="shopItem">
+                        <div class="title">Coffre epique</div>
+                        <div class="shopChest item3"></div>
+                        <div class="price coin">1000<span class="goldIcon"></span></div>
+                        <table class="progressRarity">
+                            <tr>
+                                <td class="common" style="width: 20%"></td>
+                                <td class="rare" style="width: 30%"></td>
+                                <td class="epic" style="width: 30%"></td>
+                                <td class="legendary" style="width: 20%"></td>
+                            </tr>
+                        </table>
+                        <div class="buyChest" datasrc="2"></div>
+                    </div>
+                    <div class="shopItem">
+                        <div class="title">Coffre légendaire</div>
+                        <div class="shopChest item4"></div>
+                        <div class="price cristal">10<span class="cristalIcon"></span></div>
+                        <table class="progressRarity">
+                            <tr>
+                                <td class="epic" style="width: 60%"></td>
+                                <td class="legendary" style="width: 40%"></td>
+                            </tr>
+                        </table>
+                        <div class="buyChest" datasrc="3"></div>
+                    </div>
+                    <div class="shopItem">
+                        <div class="title">Coffre du berserker</div>
+                        <div class="shopChest itemBers"></div>
+                        <div class="price cristal">20</div>
+                        <table class="progressRarity">
+                            <tr>
+                                <td class="epic" style="width: 100%"></td>
+                            </tr>
+                        </table>
+                        <div class="buyChest" datasrc="4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="questResults">
+            <div class="menu">
+                <p class="title"></p>
+            </div>
+        </div>
+        <div id="chestResults">
+            <div class="menu">
+                <p class="title"></p>
+                <div class="image"></div>
+                <div class="stats"></div>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="tabIcon" id="questTab"></div>
+            <div class="tabIcon" id="stuffTab"></div>
+            <div class="tabIcon" id="shopTab"></div>
+            <div class="tabIcon" id="socialTab"></div>
+            <div class="navbarSplitter" style="left: 25%"></div>
+            <div class="navbarSplitter" style="left: 50%"></div>
+            <div class="navbarSplitter" style="left: 75%"></div>
+        </div>
+        <div id="tooltip">
+            <div class="inner-tooltip">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="chestScreen"></div>
+<div id="panoFX"></div>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/transit-0.9.12.min.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

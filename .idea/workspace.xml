@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d6090a52-e4e9-49af-b5f4-c39ca3f46932" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/browser/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/browser/www/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../docker-api/.docker/php/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../docker-api/.docker/php/Dockerfile" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1UGHUIiIBARGEQXqCvvLteBGs86" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Maxime\dev\myGame\www\img" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Cordova.Run browser">
+    <configuration name="Run PhoneGap" type="PhoneGap" factoryName="PhoneGap/Cordova" nameIsGenerated="true">
+      <option name="myExecutable" value="C:\Users\Maxime\AppData\Roaming\npm\cordova.cmd" />
+      <option name="myWorkDir" value="$PROJECT_DIR$" />
+      <option name="myCommand" value="emulate" />
+      <option name="myPassParent" value="true" />
+      <option name="myPlatform" value="android" />
+      <option name="myExtraArgs" value="" />
+      <option name="hasTarget" value="true" />
+      <option name="target" value="" />
+      <method v="2">
+        <option name="PhonegapTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run browser" type="PhoneGap" factoryName="PhoneGap/Cordova">
+      <option name="myExecutable" value="$PROJECT_DIR$/../client-new\node_modules\cordova\bin\cordova.cmd" />
+      <option name="myWorkDir" value="$PROJECT_DIR$" />
+      <option name="myCommand" value="run" />
+      <option name="myPassParent" value="true" />
+      <option name="myPlatform" value="browser" />
+      <option name="myExtraArgs" value="" />
+      <option name="hasTarget" value="false" />
+      <option name="target" value="" />
+      <method v="2">
+        <option name="PhonegapTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="PhoneGap" factoryName="PhoneGap/Cordova">
+      <option name="myExecutable" value="C:\Users\Maxime\AppData\Roaming\npm\cordova.cmd" />
+      <option name="myWorkDir" value="$PROJECT_DIR$" />
+      <option name="myCommand" value="emulate" />
+      <option name="myPassParent" value="true" />
+      <option name="myPlatform" value="android" />
+      <option name="myExtraArgs" value="" />
+      <option name="hasTarget" value="false" />
+      <option name="target" value="" />
+      <method v="2">
+        <option name="PhonegapTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d6090a52-e4e9-49af-b5f4-c39ca3f46932" name="Default Changelist" comment="" />
+      <created>1574976025462</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574976025462</updated>
+      <workItem from="1574976026607" duration="6471000" />
+      <workItem from="1575069506219" duration="4397000" />
+      <workItem from="1575135492783" duration="1055000" />
+      <workItem from="1575137485533" duration="32903000" />
+      <workItem from="1575206455323" duration="19085000" />
+      <workItem from="1575305419744" duration="8431000" />
+      <workItem from="1575394175692" duration="9645000" />
+      <workItem from="1575479769640" duration="1149000" />
+      <workItem from="1575481154914" duration="183000" />
+      <workItem from="1575481492060" duration="266000" />
+      <workItem from="1575481979812" duration="335000" />
+      <workItem from="1575482515059" duration="10666000" />
+      <workItem from="1575564809175" duration="7831000" />
+      <workItem from="1575572847305" duration="127000" />
+      <workItem from="1575573132484" duration="8922000" />
+      <workItem from="1575655555556" duration="23661000" />
+      <workItem from="1575742719705" duration="606000" />
+      <workItem from="1575813239735" duration="32303000" />
+      <workItem from="1575854457248" duration="875000" />
+      <workItem from="1575913499067" duration="5640000" />
+      <workItem from="1575995950762" duration="11926000" />
+      <workItem from="1576085274139" duration="10103000" />
+      <workItem from="1576180394012" duration="3888000" />
+      <workItem from="1576266769517" duration="361000" />
+      <workItem from="1576267232884" duration="1516000" />
+      <workItem from="1576270050295" duration="9012000" />
+      <workItem from="1576320246293" duration="25279000" />
+      <workItem from="1576410685536" duration="5221000" />
+      <workItem from="1576437838083" duration="706000" />
+      <workItem from="1576444507730" duration="4589000" />
+      <workItem from="1576521637052" duration="4910000" />
+      <workItem from="1576608233994" duration="14052000" />
+      <workItem from="1576687958937" duration="19584000" />
+      <workItem from="1576776040116" duration="19337000" />
+      <workItem from="1576847461817" duration="4295000" />
+      <workItem from="1576853090039" duration="1985000" />
+      <workItem from="1576863462241" duration="7435000" />
+      <workItem from="1576939076036" duration="948000" />
+      <workItem from="1576940063984" duration="32690000" />
+      <workItem from="1577015077237" duration="13234000" />
+      <workItem from="1577051468930" duration="5328000" />
+      <workItem from="1577059424631" duration="1173000" />
+      <workItem from="1577061457677" duration="652000" />
+      <workItem from="1577123627335" duration="9681000" />
+      <workItem from="1577207485822" duration="1099000" />
+      <workItem from="1577304927732" duration="1808000" />
+      <workItem from="1577375116979" duration="12308000" />
+      <workItem from="1577393293810" duration="4896000" />
+      <workItem from="1577405893900" duration="2934000" />
+      <workItem from="1577465823359" duration="3759000" />
+      <workItem from="1577494000247" duration="1215000" />
+      <workItem from="1577533826269" duration="20407000" />
+      <workItem from="1577794992328" duration="658000" />
+      <workItem from="1577969072647" duration="2460000" />
+      <workItem from="1577971576321" duration="1513000" />
+      <workItem from="1577983934745" duration="11807000" />
+      <workItem from="1578066721812" duration="1268000" />
+      <workItem from="1578150724330" duration="6996000" />
+      <workItem from="1578158635690" duration="1157000" />
+      <workItem from="1578160255513" duration="13244000" />
+      <workItem from="1578236262316" duration="747000" />
+      <workItem from="1578243046330" duration="1225000" />
+      <workItem from="1578262158816" duration="2020000" />
+      <workItem from="1578329900994" duration="14795000" />
+      <workItem from="1578508018674" duration="601000" />
+      <workItem from="1578591084557" duration="600000" />
+      <workItem from="1581375509775" duration="604000" />
+      <workItem from="1581445759493" duration="1000000" />
+      <workItem from="1581538309052" duration="1329000" />
+      <workItem from="1581970996259" duration="13000" />
+      <workItem from="1582556414658" duration="719000" />
+      <workItem from="1583311678823" duration="6316000" />
+      <workItem from="1583327786128" duration="6294000" />
+      <workItem from="1583339151550" duration="650000" />
+      <workItem from="1583356086650" duration="213000" />
+      <workItem from="1583382745853" duration="3223000" />
+      <workItem from="1583467961557" duration="313000" />
+      <workItem from="1583527920924" duration="2352000" />
+      <workItem from="1583582347161" duration="12638000" />
+      <workItem from="1583609198619" duration="16677000" />
+      <workItem from="1583665503332" duration="1064000" />
+      <workItem from="1583694486249" duration="1385000" />
+      <workItem from="1583851699933" duration="1445000" />
+      <workItem from="1584061684681" duration="728000" />
+      <workItem from="1584121653618" duration="1203000" />
+      <workItem from="1584160336348" duration="1242000" />
+      <workItem from="1584174914595" duration="798000" />
+      <workItem from="1584211717499" duration="1761000" />
+      <workItem from="1587159162114" duration="603000" />
+      <workItem from="1593417223450" duration="15620000" />
+      <workItem from="1593512386666" duration="947000" />
+      <workItem from="1594198260143" duration="12896000" />
+      <workItem from="1625734674333" duration="1143000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
